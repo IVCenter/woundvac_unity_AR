@@ -17,7 +17,7 @@ public class GameManager : NetworkBehaviour {
 
     public override void OnStartServer()
     {
-        Debug.Log("Server Started");
+        Debug.Log("============== Server Started");
         foreach (GameObject go in syncObjects)
         {
             GameObject g = Instantiate(go) as GameObject;
@@ -29,13 +29,13 @@ public class GameManager : NetworkBehaviour {
 
     public override void OnStartClient()
     {
-        Debug.Log("Client Started");
-        foreach (GameObject go in syncObjects)
-        {
-            //GameObject g = Instantiate(go) as GameObject;
-            //NetworkServer.Spawn(g);
-            //Debug.Log("NetworkServer spawned object: " + g.name);
+        Debug.Log("============== Client Started");
+        //foreach (GameObject go in syncObjects)
+        //{
+        //    GameObject g = Instantiate(go) as GameObject;
+        //    NetworkServer.Spawn(g);
+        //    Debug.Log("NetworkServer spawned object: " + g.name);
 
-        }
+        //}
     }
 }
