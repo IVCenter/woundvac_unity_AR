@@ -17,7 +17,7 @@ public class GhostVacuumPad : MonoBehaviour {
             if (tracker != null)
             {
                 transform.parent = tracker.transform;
-                transform.localPosition = Vector3.zero;
+                transform.localPosition = new Vector3(4f, 0.1f, 20f);
             }
         }
 
