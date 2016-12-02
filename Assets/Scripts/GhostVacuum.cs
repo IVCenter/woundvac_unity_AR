@@ -14,9 +14,9 @@ public class GhostVacuum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent == null || transform.parent.tag != "VuforiaTracker")
+        if (transform.parent == null || transform.parent.tag != "VuforiaTrackerBody")
         {
-            GameObject tracker = GameObject.FindGameObjectWithTag("VuforiaTracker");
+            GameObject tracker = GameObject.FindGameObjectWithTag("VuforiaTrackerBody");
             if (tracker != null)
             {
                 transform.parent = tracker.transform;
