@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class GhostVacuum : NetworkBehaviour
+public class GhostVacuum : MonoBehaviour
 {
 
     // Use this for initialization
