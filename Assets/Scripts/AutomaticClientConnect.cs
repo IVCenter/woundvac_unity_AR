@@ -4,6 +4,8 @@ using UnityEngine.Networking;
 
 public class AutomaticClientConnect : NetworkManager {
 
+    public string ServerIp = "137.110.119.201";
+
     NetworkManager netMan;
 
 	// Use this for initialization
@@ -12,7 +14,7 @@ public class AutomaticClientConnect : NetworkManager {
 
         netMan = NetworkManager.singleton;
 
-        netMan.networkAddress = "137.110.119.201";
+        netMan.networkAddress = ServerIp;
         netMan.networkPort = (int)7777;
         netMan.maxConnections = 2;
 
