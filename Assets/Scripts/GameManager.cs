@@ -27,9 +27,22 @@ public class GameManager : NetworkBehaviour {
         }
     }
 
+    [Command]
+    void CmdSpawn()
+    {
+        foreach (GameObject go in syncObjects)
+        {
+            GameObject g = Instantiate(go) as GameObject;
+            NetworkServer.SpawnWithClientAuthority(g, connectionToClient);
+            Debug.Log("NetworkServer spawned object: " + g.name);
+
+        }
+    }
+
     public override void OnStartClient()
     {
         Debug.Log("============== Client Started");
+        CmdSpawn();
         //foreach (GameObject go in syncObjects)
         //{
         //    GameObject g = Instantiate(go) as GameObject;

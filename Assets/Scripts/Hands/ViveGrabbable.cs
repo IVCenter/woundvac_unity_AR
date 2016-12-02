@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-[RequireComponent(typeof(GrabHighlight), typeof(Rigidbody), typeof(Collider))]
 public class ViveGrabbable : NetworkBehaviour
 {
 

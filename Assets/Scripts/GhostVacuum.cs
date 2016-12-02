@@ -23,6 +23,7 @@ public class GhostVacuum : NetworkBehaviour
                 transform.localPosition = Vector3.zero;
             }
         }
+
     }
 
 }
