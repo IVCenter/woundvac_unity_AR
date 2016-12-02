@@ -10,7 +10,7 @@ public class Move : NetworkBehaviour
 
     void Update()
     {
-        if (!isServer) return;
+        //if (isServer) return;
 
         float translation = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;

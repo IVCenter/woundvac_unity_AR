@@ -5,8 +5,6 @@ using UnityEngine.Networking;
 [RequireComponent(typeof(GrabHighlight), typeof(Rigidbody), typeof(Collider))]
 public class ViveGrabbable : NetworkBehaviour
 {
-    [SyncVar]
-    public bool isGrabbed = false;
 
     [SyncVar]
     public bool highlightObject = false;
@@ -25,30 +23,18 @@ public class ViveGrabbable : NetworkBehaviour
 
     public virtual void OnGrab()
     {
-        highlightObject = false;
+        highlightObject = true;
     }
 
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        rigid.useGravity = false;
     }
 
     void Update()
     {
-        if (isGrabbed)
-        {
-            if (rigid.useGravity)
-            {
-                rigid.useGravity = false;
-            }
-        }
-        else
-        {
-            if (!rigid.useGravity)
-            {
-                rigid.useGravity = true;
-            }
-        }
+
 
         if (highlightObject)
         {
